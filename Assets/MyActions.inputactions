@@ -1,0 +1,94 @@
+{
+    "name": "MyActions",
+    "maps": [
+        {
+            "name": "Actions",
+            "id": "a26f4344-5a90-40d6-98cb-23b5b79cb3d2",
+            "actions": [
+                {
+                    "name": "GrabR",
+                    "type": "Button",
+                    "id": "1b0a2cf8-5291-42a1-8bef-a29f454d3882",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "GrabL",
+                    "type": "Button",
+                    "id": "835130c4-7b7f-4306-8e2e-7160d3a8b768",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TriggerR",
+                    "type": "Button",
+                    "id": "b6744c60-0951-4dfa-8f4c-1ae1b359f7bf",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "TriggerL",
+                    "type": "Button",
+                    "id": "fa54e2a7-3338-4df5-816f-2892024926b6",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1ea21639-e50f-4ffc-915a-4e416f9c0d3d",
+                    "path": "<OculusTouchController>{RightHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GrabR",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "73c45e55-472d-44f0-9c3e-f335f196e81d",
+                    "path": "<OculusTouchController>{LeftHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "GrabL",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bb115f06-b1e8-48b4-bc5f-3d0a80791146",
+                    "path": "<OculusTouchController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TriggerR",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b5f08dcc-47d8-4bc5-a285-c0986cab1869",
+                    "path": "<OculusTouchController>{LeftHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "TriggerL",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
