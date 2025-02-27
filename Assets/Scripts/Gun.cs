@@ -28,7 +28,8 @@ public class Gun : MonoBehaviour
         var rotationWOffset = _followTarget.rotation * Quaternion.Euler(rotationOffset);
         var q = rotationWOffset * Quaternion.Inverse(_body.rotation);
         q.ToAngleAxis(out float angle, out Vector3 axis);
-        _body.angularVelocity = angle * axis * Mathf.Deg2Rad * rotateSpeed;
+        angle = Vector3.SignedAngle(_body.transform.forward, rotationWOffset * Vector3.forward, axis);
+        _body.angularVelocity = angle * Mathf.Deg2Rad * rotateSpeed * axis;
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
