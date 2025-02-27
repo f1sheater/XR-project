@@ -10,6 +10,7 @@ public class Gun : MonoBehaviour
     [SerializeField] private Vector3 rotationOffset;
     [SerializeField] private GameObject laser;
     [SerializeField] private InputActionReference shootAction;
+    [SerializeField] private InputActionReference quitAction;
     [SerializeField] private AudioSource hitSound;
     [SerializeField] private GameObject winText;
     private Transform _followTarget;
@@ -34,6 +35,7 @@ public class Gun : MonoBehaviour
     void Start()
     {
         shootAction.action.Enable();
+        quitAction.action.Enable();
 
         _followTarget = followObject.transform;
         _body = GetComponent<Rigidbody>();
@@ -63,6 +65,15 @@ public class Gun : MonoBehaviour
                     winText.SetActive(true);
                 }
             }
+        }
+
+        if (quitAction.action.WasPressedThisFrame())
+        {
+            #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+            #else
+                Application.Quit();
+            #endif
         }
     }
 }
